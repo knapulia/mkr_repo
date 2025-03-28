@@ -13,7 +13,7 @@ def compare(file1, file2):
 
 def save_results(filename, lines):
     with open(filename, 'w', encoding='utf-8') as file:
-        file.writelines(lines)
+        file.writelines(line + '\n' for line in lines)
 
 def main():
     file1 = input("Введіть назву файлу 1: ")
