@@ -1,6 +1,7 @@
 def load_file(file_path):
-   with open (file_path, 'r', encoding='utf-8') as file:
-       return file.read().splitlines()
+    with open(file_path, 'r', encoding='utf-8') as file:
+        return file.read().splitlines()
+
 
 def compare(file1, file2):
     lines1 = load_file(file1)
@@ -11,9 +12,11 @@ def compare(file1, file2):
 
     return same_lines, diff_lines
 
+
 def save_results(filename, lines):
     with open(filename, 'w', encoding='utf-8') as file:
         file.writelines(line + '\n' for line in lines)
+
 
 def main():
     file1 = input("Введіть назву файлу 1: ")
@@ -25,6 +28,7 @@ def main():
     save_results("diff.txt", diff)
 
     print("створено файли same.txt і diff.txt")
+
 
 if __name__ == "__main__":
     main()
