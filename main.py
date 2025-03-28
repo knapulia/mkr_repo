@@ -14,3 +14,17 @@ def compare(file1, file2):
 def save_results(filename, lines):
     with open(filename, 'w', encoding='utf-8') as file:
         file.writelines(lines)
+
+def main():
+    file1 = input("Введіть назву файлу 1: ")
+    file2 = input("Введіть назву файлу 2: ")
+
+    same, diff = compare(file1, file2)
+
+    save_results("same.txt", same)
+    save_results("diff.txt", diff)
+
+    print("створено файли same.txt і diff.txt")
+
+if __name__ == "__main__":
+    main()
