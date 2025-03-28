@@ -11,4 +11,6 @@ def compare(file1, file2):
 
     return same_lines, diff_lines
 
-
+def save_results(filename, lines):
+    with open(filename, 'w', encoding='utf-8') as file:
+        file.writelines(lines)
